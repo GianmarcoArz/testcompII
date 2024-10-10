@@ -1,0 +1,47 @@
+<div>
+  <img
+    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwKxAkYO_JMTtB0gesT5TWqmAgn5Po4h8cbQ&s"
+    alt=""
+  />
+  <div class="card py-5 my-4 h-75 w-100">
+    <img
+      src="https://quotefancy.com/media/wallpaper/3840x2160/5283907-Cathy-Guisewite-Quote-My-mother-had-always-taught-me-to-write.jpg"
+      class="card-img-top"
+      alt="..."
+    />
+    <div class="card-body">
+      <h5 class="card-title">{{ posts[0].title }}</h5>
+      <p class="card-text">
+        {{ posts[0].body }}
+      </p>
+      <a href="#" class="btn btn-primary">{{ posts[0].tags[0] }}</a>
+      <a href="#" class="btn btn-primary mx-5">{{ posts[0].tags[1] }}</a>
+      <a href="#" class="btn btn-primary">{{ posts[0].tags[2] }}</a>
+    </div>
+  </div>
+</div>
+<h2 class="fs-1 fw-bold text-bg-primary rounded-2">ARTICOLI DI OGGI</h2>
+<div class="container-fluid">
+  <div class="row d-flex">
+    <div class="col-3 d-flex gap-2" *ngFor="let post of post4">
+      <div class="card" style="width: 22rem">
+        <div class="card-body">
+          <h5 class="card-title">{{ post.title }}</h5>
+          <p class="card-text">
+            {{ post.body }}
+          </p>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">{{ post.tags[0] }}</li>
+          <li class="list-group-item">{{ post.tags[1] }}</li>
+          <li class="list-group-item">{{ post.tags[2] }}</li>
+        </ul>
+        <div class="card-body">
+          <button [routerLink]="['/post-detail', post.id]" class="btn btn-info">
+            Details
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

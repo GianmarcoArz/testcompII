@@ -1,0 +1,24 @@
+<h2 class="fs-1 fw-bold text-bg-danger rounded-2">POST NON ATTIVI OGGI</h2>
+<div class="container-fluid">
+  <div class="row d-flex">
+    <div class="col-3 d-flex gap-2" *ngFor="let post of postInac">
+      <div class="card" style="width: 22rem">
+        <div class="card-body">
+          <h5 class="card-title">{{ post.title }}</h5>
+          <p class="card-text">
+            {{ post.body }}
+          </p>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">{{ post.tags[0] }}</li>
+          <li class="list-group-item">{{ post.tags[1] }}</li>
+          <li class="list-group-item">{{ post.tags[2] }}</li>
+        </ul>
+        <div class="card-body">
+          <a href="#" class="card-link">Card link</a>
+          <a href="#" class="card-link">Another link</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
